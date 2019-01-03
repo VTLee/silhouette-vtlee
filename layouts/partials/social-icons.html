@@ -1,4 +1,12 @@
-<a class="py-2 px-2 d-none d-lg-inline-block" href="https://twitter.com/sombradelrio"><i class="fab fa-twitter"></i></a>
-<a class="py-2 px-2 d-none d-lg-inline-block" href="https://instagram.com/sombradelrio"><i class="fab fa-instagram"></i></a>
-<a class="py-2 px-2 d-none d-lg-inline-block" href="https://www.linkedin.com/in/matt-button-2225537"><i class="fab fa-linkedin"></i></a>
+{{ if (isset .Site.Params "twitterlink") }} 
+<a class="py-2 px-2 d-none d-lg-inline-block" href="{{ .Site.Params.twitterLink }}"><i class="fab fa-twitter"></i></a>
+{{ end }}
+{{ if (isset .Site.Params "instagramlink") }} 
+<a class="py-2 px-2 d-none d-lg-inline-block" href="{{ .Site.Params.instragramLink }}"><i class="fab fa-instagram"></i></a>
+{{ end }}
+{{ if (isset .Site.Params "linkedinlink") }} 
+<a class="py-2 px-2 d-none d-lg-inline-block" href="{{ .Site.Params.linkedInLink }}"><i class="fab fa-linkedin"></i></a>
+{{ end }}
+{{ if .Site.Params.rssFeed }}
 <a class="py-2 px-2 d-none d-lg-inline-block" href='{{ "index.xml" | absURL }}'><i class="fas fa-rss"></i></a>
+{{ end }}
