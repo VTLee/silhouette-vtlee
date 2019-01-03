@@ -5,12 +5,13 @@
         background-image: linear-gradient(
             rgba(0, 0, 0, 0.15), 
             rgba(0, 0, 0, 0.15)
-          ), url('{{ "images/hero-main.jpg" | absURL }}');
-          height: 500px;
+          ), url('{{ "images/header2.png" | absURL }}');
+          height: 700px;
       }
 
       .feature-image-text {
-          margin-top: 20px;
+          margin-top: 150px;
+          text-shadow: 2px 1px 4px  black;
       }
 
       @media (min-width: 1200px) {
@@ -48,7 +49,7 @@
 
     <header class="feature-image">
         <div class="feature-image-text">
-            <h1 class="text-center">{{ .Title }}</h1>
+            <h1 class="text-center">Posts in {{ .Title }}</h1>
 
             {{ $title := urlize .Title }}
             {{ with .Site.Taxonomies.categories }}

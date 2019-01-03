@@ -1,2 +1,2 @@
-<h5>{{ .Site.Copyright }}</h5>
-{{ .Site.Params.ContentSharing }}
+<h5>Copyright © {{ if (isset .Site.Params "copyrightby") }} By {{ .Site.Params.copyrightBy }} {{ end }}</h5>
+{{ .Site.Params.copyrightLongNotice }}
